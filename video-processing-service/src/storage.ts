@@ -26,6 +26,16 @@ export function setUpDirectories() {
 }
 
 /**
+ * @param dirPath - The directory path to check.
+ */
+function ensureDirectoryExistence(dirPath: string) {
+    if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, {recursive: true}); // recursive: true allows creating nested directories
+        console.log(`Directory created at ${dirPath}`);
+    }
+}
+
+/**
  * @param rawVideoName - The name of the file to convert from {@link localRawVideoPath}
  * @param processedVideoName - The name of the file to convert to {@link localProcessedVideoPath}
  * @returns A promise that resolves when the video has been converted.
@@ -111,14 +121,4 @@ function deleteFile(filePath: string): Promise<void> {
             resolve();
         }
     });
-}
-
-/**
- * @param dirPath - The directory path to check.
- */
-function ensureDirectoryExistence(dirPath: string) {
-    if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, {recursive: true}); // recursive: true allows creating nested directories
-        console.log(`Directory created at ${dirPath}`);
-    }
 }
