@@ -66,7 +66,7 @@ export async function uploadProcessedVideo(fileName: string){
     const bucket = storage.bucket(processedVideoBucketName);
 
     await bucket.upload(`${localProcessedVideoPath}/${fileName}`, {destination: fileName});
-    console.log(`${localProcessedVideoPath}/${fileName} uploaded to gs://${processedVideoBucketName}/${fileName}.`;)
+    console.log(`${localProcessedVideoPath}/${fileName} uploaded to gs://${processedVideoBucketName}/${fileName}.`);
 
     await bucket.file(fileName).makePublic();
 
