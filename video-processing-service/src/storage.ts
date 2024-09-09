@@ -73,7 +73,6 @@ export async function uploadProcessedVideo(fileName: string){
 }
 
 /**
- * 
  * @param fileName - The name of the file to delete from {@link localRawVideoPath} folder.
  * @returns A promise that resolves when the file has been deleted
  */
@@ -82,7 +81,6 @@ export function deleteRawVideo(fileName: string) {
 }
 
 /**
- * 
  * @param fileName - The name of the file to delete from {@link localProcessedVideoPath} folder.
  * @returns A promise that resolves when the file has been deleted
  */
@@ -91,7 +89,6 @@ export function deleteProcessedVideo(fileName: string) {
 }
 
 /**
- * 
  * @param filePath - The path of the file to delete.
  * @returns A promise that is resolved when the file has been deleted.
  */
@@ -117,7 +114,6 @@ function deleteFile(filePath: string): Promise<void> {
 }
 
 /**
- * 
  * @param dirPath - The directory path to check.
  */
 function ensureDirectoryExistence(dirPath: string) {
