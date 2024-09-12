@@ -1,3 +1,3 @@
-# youtube-clone
+# YouTube clone
 
-This is a YouTube clone Web App built as an independent project.
+This is a youtube clone built as a personal project.
